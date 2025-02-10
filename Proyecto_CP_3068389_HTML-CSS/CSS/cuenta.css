@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  background-color: #fcf6c3;
+}
+/*Diseño de la cabecera y la navegación -----------------------------------------------------------------------*/
+.navegacion {
+  background-color: #0799d3;
+  padding-bottom: 0.5rem;
+}
+/*Selección de hijo directo para cambiar solo el tamaño del logo*/
+.navegacion > img {
+  width: 12.5rem;
+  padding: 1rem 0rem;
+}
+.navegacion,
+.enlaces,
+.enlaces a {
+  display: flex;
+}
+.navegacion,
+.enlaces {
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navegacion {
+  justify-content: space-around;
+}
+.enlaces {
+  justify-content: center;
+  gap: 0.6rem;
+}
+.enlaces a {
+  background-color: #e6cc59;
+  color: #000;
+  font-family: "Rockwell Condensed";
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0.8rem 2.2rem;
+  border: 0.1rem solid #000;
+  border-radius: 3.1rem;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.3rem;
+}
+.enlaces a:hover {
+  color: #fff;
+  background-color: #ffff00;
+}
+.lupa {
+  width: 1.87rem;
+}
+/*Seccion del main --------------------------------------------------------------------------------------------*/
+.container {
+  font-family: "Rockwell Condensed";
+}
+.container h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.secciones {
+  display: flex;
+  flex-wrap: wrap;
+}
+.seccion_1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 65rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.seccion_1 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0.2rem solid #187f99;
+  background: linear-gradient(
+    to bottom,
+    #2ed0f8 13%,
+    #187f99 13% 14.5%,
+    #fff 14.5%
+  );
+  text-decoration: none;
+  font-size: 2rem;
+  color: #000;
+  padding: 2rem 0 0.4rem 0;
+  border-radius: 0.8rem;
+  width: 18.75rem;
+  box-shadow: -1rem 1rem #21a0c0;
+}
+.seccion_1 img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  object-position: 60% 0;
+}
+.seccion_1 a:nth-child(2) img {
+  object-position: 90% 0;
+}
+.seccion_2 img {
+  object-fit: cover;
+  border: 0.2rem solid #187f99;
+  width: 12rem;
+  height: 12rem;
+  margin-left: 2rem;
+}
+/*Media queries para ajustes de la página (responsive design) -------------------------------------------------*/
+/*Ajuste de pantalla menor ha 1322px (pc)*/
+@media (max-width: 1322px) {
+  .seccion_1 {
+    margin: 0 auto 2rem auto;
+  }
+  .seccion_2 {
+    margin: 0 auto;
+  }
+}
+@media all and (max-width: 562px) {
+  html {
+    width: 562px;
+  }
+}
+/* Pantallas desde (1367 - 768)px hasta (1920 - 1200) px (PC pequeña a PC media) */
+@media all and (min-width: 1367px) and (max-width: 1920px) {
+  html {
+    font-size: 1.2vw;
+  }
+  .navegacion > img {
+    width: 10rem;
+  }
+  .enlaces a {
+    font-size: 1.3rem;
+    padding: 0.6rem 1.8rem;
+  }
+  .lupa {
+    width: 2rem;
+    height: auto;
+  }
+  .container h1 {
+    font-size: 3.5rem;
+  }
+  .seccion_1 a {
+    font-size: 1.8rem;
+    padding: 1.5rem 0 0.3rem 0;
+    width: 16rem;
+  }
+  .seccion_1 img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .seccion_2 img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+/*  Pantallas desde (1921 - 1200) px hasta (2560 - 1440) px (Pc media a Pc grnade) */
+@media all and (min-width: 1921px) and (max-width: 2560px) {
+  html {
+    font-size: 0.7vw;
+  }
+  .navegacion > img {
+    width: 20rem;
+  }
+  .enlaces a {
+    font-size: 2rem;
+    padding: 1rem 3rem;
+  }
+  .lupa {
+    width: 2.5rem;
+  }
+  .container h1 {
+    font-size: 5rem;
+  }
+  .secciones {
+    justify-content: center;
+  }
+  .seccion_1 {
+    gap: 3rem;
+    width: 85rem;
+  }
+  .seccion_1 a {
+    font-size: 2.5rem;
+    width: 22rem;
+    padding: 2.5rem 0 0.6rem 0;
+    box-shadow: -1.5rem 1.5rem #21a0c0;
+  }
+  .seccion_1 img {
+    width: 12rem;
+    height: 12rem;
+  }
+  .seccion_2 img {
+    width: 15rem;
+    height: 15rem;
+    margin-left: 3rem;
+  }
+}
+/*  Pantallas desde (2561 - 1440) px hasta (5121 - 2880) px (Pc grnade y Pc gamas de alta resolución) */
+@media all and (min-width: 2561px) and (max-width: 5121px) {
+  html {
+    font-size: 0.5vw;
+  }
+  .navegacion > img {
+    width: 30rem;
+  }
+  .enlaces a {
+    font-size: 2.5rem;
+    padding: 1.5rem 4rem;
+  }
+  .lupa {
+    width: 3rem;
+  }
+  .container h1 {
+    font-size: 6rem;
+  }
+  .secciones {
+    justify-content: center;
+  }
+  .seccion_1 {
+    gap: 4rem;
+    width: 100rem;
+  }
+  .seccion_1 a {
+    font-size: 3rem;
+    width: 30rem;
+    padding: 3rem 0 1rem 0;
+    box-shadow: -2rem 2rem #21a0c0;
+  }
+  .seccion_1 img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .seccion_2 img {
+    width: 20rem;
+    height: 20rem;
+    margin-left: 4rem;
+  }
+}
+/* Pantallas de mas de (5122 - 2880) px*/
+@media all and (min-width: 5122px) {
+  html {
+    font-size: 2.5rem;
+  }
+  .secciones {
+    justify-content: center;
+  }
+}

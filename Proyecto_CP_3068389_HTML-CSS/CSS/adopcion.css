@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  background-color: #fcf6c3;
+  font-family: "Rockwell Condensed";
+}
+/*Diseño de la cabecera y la navegación -----------------------------------------------------------------------*/
+.navegacion {
+  background-color: #0799d3;
+  padding-bottom: 0.5rem;
+}
+/*Selección de hijo directo para cambiar solo el tamaño del logo*/
+.navegacion > img {
+  width: 12.5rem;
+  padding: 1rem 0rem;
+}
+.navegacion,
+.enlaces,
+.enlaces a {
+  display: flex;
+}
+.navegacion,
+.enlaces {
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navegacion {
+  justify-content: space-around;
+}
+.enlaces {
+  justify-content: center;
+  gap: 0.6rem;
+}
+.enlaces a {
+  background-color: #e6cc59;
+  color: #000;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0.8rem 2.2rem;
+  border: 0.1rem solid #000;
+  border-radius: 3.1rem;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.3rem;
+}
+.enlaces a:hover {
+  color: #fff;
+  background-color: #ffff00;
+}
+.lupa {
+  width: 1.87rem;
+}
+/*Seccion del main --------------------------------------------------------------------------------------------*/
+main {
+  margin-bottom: 2.5rem;
+}
+main > p {
+  font-size: 2rem;
+  text-align: center;
+}
+.catalogo {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+.mascota {
+  position: relative;
+}
+.mascota div:nth-last-of-type(2) {
+  width: 8rem;
+  height: 2.5rem;
+  background-color: #e6cc59;
+  position: absolute;
+  left: 3.5rem;
+  bottom: 19.2rem;
+}
+.catalogo .mascota:nth-child(odd) div:empty {
+  background: #8bddfd;
+}
+.datos-mascota img {
+  width: 15rem;
+  height: 20rem;
+  object-fit: cover;
+}
+.datos-mascota {
+  display: flex;
+  gap: 3rem;
+}
+.informacion-mascota {
+  text-align: center;
+  font-size: 1.5rem;
+  word-spacing: 0.3rem;
+}
+.informacion-mascota button {
+  font-family: "Rockwell Condensed";
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #0799d3;
+  border: none;
+  color: #fff;
+  padding: 0.7rem 0.3rem;
+  border-radius: 5rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+.informacion-mascota button:hover {
+  background-color: #ffff00;
+  color: #000;
+  font-weight: bold;
+}
+/*Media queries para ajustes de la página (responsive design) -------------------------------------------------*/
+/*Ajuste de pantalla menor ha 557px (pc)*/
+@media all and (max-width: 557px) {
+  html {
+    width: 557px;
+  }
+}
+/*Ajustes para una pantalla con resolucion de 1820 px - 2559 px*/
+@media all and (min-width: 1820px) and (max-width: 2559px) {
+  .navegacion > img {
+    width: 15rem;
+  }
+  .enlaces {
+    gap: 0.9rem;
+  }
+  .enlaces a {
+    font-size: 2rem;
+  }
+  .lupa {
+    width: 2.5rem;
+  }
+  main > p {
+    font-size: 2.4rem;
+  }
+  .catalogo {
+    justify-content: center;
+    width: 90rem;
+    margin: 0 auto;
+  }
+  .informacion-mascota {
+    font-size: 1.7rem;
+  }
+  .informacion-mascota button {
+    font-size: 1.7rem;
+  }
+}
+/*Ajustes para una pantalla con resolucion de 2560 px - 4095 px*/
+@media all and (min-width: 2560px) and (max-width: 4095px) {
+  .navegacion > img {
+    width: 18rem;
+  }
+  .enlaces {
+    gap: 0.9rem;
+  }
+  .enlaces a {
+    font-size: 2.5rem;
+  }
+  .lupa {
+    width: 3rem;
+  }
+  main > p {
+    font-size: 3rem;
+  }
+  .catalogo {
+    justify-content: flex-start;
+    width: 150rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mascota div:nth-last-of-type(2) {
+    width: 13rem;
+    height: 3.5rem;
+    left: 3.5rem;
+    bottom: 27rem;
+  }
+  .datos-mascota img {
+    width: 20rem;
+    height: 28rem;
+  }
+  .informacion-mascota {
+    font-size: 2.3rem;
+  }
+  .informacion-mascota button {
+    font-size: 2.3rem;
+  }
+}
+/*Ajustes para una pantalla con resolucion de 4096 px - 5121 px*/
+@media all and (min-width: 4096px) and (max-width: 5121px) {
+  .navegacion > img {
+    width: 23rem;
+  }
+  .enlaces {
+    gap: 1.2rem;
+  }
+  .enlaces a {
+    border-radius: 8rem;
+    font-size: 3.5rem;
+    padding: 1.5rem 3.7rem;
+  }
+  .lupa {
+    width: 4rem;
+  }
+  main > p {
+    font-size: 4.5rem;
+  }
+  .catalogo {
+    margin-top: 8rem;
+  }
+  .mascota div:nth-last-of-type(2) {
+    width: 16rem;
+    height: 4.5rem;
+    left: 3.5rem;
+    bottom: 30rem;
+  }
+  .datos-mascota img {
+    width: 23rem;
+    height: 31rem;
+  }
+  .informacion-mascota {
+    font-size: 2.6rem;
+  }
+  .informacion-mascota button {
+    font-size: 2.6rem;
+  }
+}
+/* Pantallas de mas de (5122 - 2880) px*/
+@media all and (min-width: 5122px) {
+  html {
+    font-size: 2.1rem;
+  }
+  .navegacion > img {
+    width: 14rem;
+  }
+  .enlaces {
+    gap: 1.2rem;
+  }
+  .enlaces a {
+    border-radius: 8rem;
+    font-size: 2rem;
+    padding: 1rem 2.5rem;
+  }
+  .lupa {
+    width: 2.5rem;
+  }
+}

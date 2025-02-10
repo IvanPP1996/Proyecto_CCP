@@ -1,0 +1,333 @@
+body {
+  margin: 0;
+  background-color: #fcf6c3;
+}
+/*Diseño de la cabecera y la navegación -----------------------------------------------------------------------*/
+.navegacion {
+  background-color: #0799d3;
+  padding-bottom: 0.5rem;
+}
+/*Selección de hijo directo para cambiar solo el tamaño del logo*/
+.navegacion > img {
+  width: 12.5rem;
+  padding: 1rem 0rem;
+}
+.navegacion,
+.enlaces,
+.enlaces a {
+  display: flex;
+}
+.navegacion,
+.enlaces {
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navegacion {
+  justify-content: space-around;
+}
+.enlaces {
+  justify-content: center;
+  gap: 0.6rem;
+}
+.enlaces a {
+  background-color: #e6cc59;
+  color: #000;
+  font-family: "Rockwell Condensed";
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0.8rem 2.2rem;
+  border: 0.1rem solid #000;
+  border-radius: 3.1rem;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.3rem;
+}
+.enlaces a:hover {
+  color: #fff;
+  background-color: #ffff00;
+}
+.lupa {
+  width: 1.87rem;
+}
+/*Diseño del main o cuerpo de la página------------------------------------------------------------------------*/
+.container {
+  display: flex;
+  align-items: center;
+  font-family: "Rockwell Condensed";
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.seccion_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.3rem;
+  margin: 4rem 3rem 0 8rem;
+}
+.fundacion > div {
+  display: flex;
+  border: 0.3rem solid #2ed0f8;
+  border-radius: 1rem;
+  width: 30rem;
+}
+.fundacion {
+  display: flex;
+  align-items: center;
+}
+.contenido p {
+  margin: 2.5rem 0 1rem 0;
+}
+.contenido a {
+  color: #000;
+}
+.contenido a:hover {
+  color: #7c7c7c;
+}
+.fundacion > a {
+  text-align: center;
+  background-color: #2ed0f8;
+  border: 0.3rem solid #000;
+  border-radius: 2rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 4.5rem;
+  padding: 0.6rem 0rem;
+  width: 16rem;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+}
+.fundacion > a:hover {
+  color: #000;
+  background-color: #0799d3;
+  border: none;
+}
+.seccion_2 {
+  width: 20rem;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 3.5rem;
+}
+.seccion_2 p {
+  padding-top: 5rem;
+}
+/*Media queries para ajustes de la página (responsive design) -------------------------------------------------*/
+/*Ajuste de pantalla menor ha 1340px (pc)*/
+@media all and (max-width: 1340px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .seccion_2 {
+    width: 50rem;
+  }
+  .seccion_2 p {
+    padding-top: 0rem;
+  }
+}
+@media all and (max-width: 920px) {
+  .seccion_1 {
+    margin-left: 0;
+  }
+  .fundacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .fundacion > a {
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+  .seccion_2 {
+    flex-direction: column;
+    width: 30rem;
+    align-items: center;
+  }
+}
+@media all and (max-width: 567px) {
+  html {
+    width: 567px;
+  }
+  .seccion_1 {
+    margin: 4rem auto 0 auto;
+  }
+}
+/* Pantallas desde (1441 - 900)px hasta (1680 - 1050) px*/
+@media all and (min-width: 1441px) and (max-width: 1680px) {
+  .container {
+    justify-content: center;
+  }
+}
+/* Pantallas desde (1681 - 1050) px hasta (1854 1050) px*/
+@media all and (min-width: 1681px) and (max-width: 1854px) {
+  html {
+    font-size: 1.2rem;
+  }
+  .container {
+    justify-content: center;
+  }
+  .fundacion {
+    font-size: 1.2rem;
+  }
+}
+/* Pantallas desde (1855 - 1050)px hasta (1920 - 1200) px*/
+@media all and (min-width: 1855px) and (max-width: 1920px) {
+  .navegacion > img {
+    width: 15rem;
+  }
+  .enlaces a {
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+  }
+  .lupa {
+    width: 2.5rem;
+  }
+  .container {
+    margin: 5rem 1rem;
+  }
+  .seccion_1 {
+    font-size: 1.9rem;
+    gap: 3rem;
+    margin: 5rem 4rem 0 10rem;
+  }
+  .fundacion > div {
+    width: 40rem;
+    padding: 1.2rem;
+  }
+  .fundacion img {
+    width: 15rem;
+    height: auto;
+  }
+  .fundacion > a {
+    font-size: 2rem;
+    width: 20rem;
+    padding: 1rem 0.5rem;
+  }
+  .seccion_2 {
+    font-size: 3.5rem;
+    width: 22rem;
+    margin-left: 6rem;
+  }
+  .seccion_2 img {
+    width: 100%;
+    max-width: 25rem;
+  }
+  .seccion_2 p {
+    padding-top: 4rem;
+  }
+}
+/* Pantallas desde (1920 - 1200)px hasta (2560 - 1440) px (PC pequeña a PC media) */
+@media all and (min-width: 1921px) and (max-width: 2560px) {
+  .container {
+    justify-content: center;
+  }
+  .fundacion > div {
+    width: 36rem;
+  }
+  .contenido p,
+  .contenido a {
+    font-size: 1.8rem;
+  }
+}
+/* Pantallas desde (2561 - 1440) px hasta (5121 - 2880) px*/
+@media all and (min-width: 2561px) and (max-width: 5121px) {
+  .navegacion > img {
+    width: 20rem;
+    padding: 2rem 0;
+  }
+  .enlaces a {
+    font-size: 1.9rem;
+    padding: 1.2rem 2.5rem;
+  }
+  .lupa {
+    width: 1.9rem;
+  }
+  .container {
+    justify-content: center;
+  }
+  .seccion_1 {
+    gap: 4rem;
+    margin: 8rem 6rem 0 14rem;
+  }
+  .fundacion > div {
+    width: 42rem;
+    padding: 2rem;
+  }
+  .contenido {
+    font-size: 2rem;
+  }
+  .contenido p,
+  .contenido a {
+    font-size: 2.4rem;
+  }
+  .fundacion > a {
+    font-size: 3rem;
+    width: 30rem;
+    padding: 1rem 1rem;
+    border-radius: 20rem;
+  }
+  .seccion_2 {
+    font-size: 4rem;
+    width: 25rem;
+    margin-left: 5rem;
+  }
+  .seccion_2 img {
+    width: 100%;
+    max-width: 40rem;
+  }
+  .seccion_2 p {
+    padding-top: 6rem;
+  }
+}
+/* Pantallas de mas de (5122 - 2880) px*/
+@media all and (min-width: 5122px) {
+  .navegacion > img {
+    width: 25rem;
+    padding: 3rem 0;
+  }
+  .enlaces a {
+    font-size: 2.5rem;
+    padding: 1.5rem 3rem;
+  }
+  .lupa {
+    width: 2.5rem;
+  }
+  .container {
+    justify-content: center;
+  }
+  .seccion_1 {
+    gap: 5rem;
+    margin: 10rem 8rem 0 18rem;
+  }
+  .fundacion > div {
+    width: 50rem;
+    padding: 3rem;
+  }
+  .contenido {
+    font-size: 2.5rem;
+  }
+  .contenido p,
+  .contenido a {
+    font-size: 3rem;
+  }
+  .fundacion > a {
+    font-size: 3.5rem;
+    width: 35rem;
+    padding: 1rem 1.5rem;
+    border-radius: 20rem;
+  }
+  /* Sección 2 */
+  .seccion_2 {
+    font-size: 5rem;
+    width: 30rem;
+    margin-left: 8rem;
+  }
+  .seccion_2 img {
+    width: 100%;
+    max-width: 50rem;
+  }
+  .seccion_2 p {
+    padding-top: 8rem;
+  }
+}

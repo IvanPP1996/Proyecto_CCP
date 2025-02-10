@@ -1,0 +1,163 @@
+/*Seccion cuerpo completo del HTML ----------------------------------------------------------------------------*/
+body {
+  background-color: #fcf6c3;
+  margin: 0;
+  font-family: "Rockwell Condensed";
+}
+
+/*Seccion de cabecera y navegación ----------------------------------------------------------------------------*/
+.navegacion {
+  background-color: #0799d3;
+  padding-bottom: 0.5rem;
+}
+/*Selección de hijo directo para cambiar solo el tamaño del logo*/
+.navegacion > img {
+  width: 12.5rem;
+  padding: 1rem 0rem;
+}
+.navegacion,
+.enlaces,
+.enlaces a {
+  display: flex;
+}
+.navegacion,
+.enlaces {
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navegacion {
+  justify-content: space-around;
+}
+.enlaces {
+  justify-content: center;
+  gap: 0.6rem;
+}
+.enlaces a {
+  background-color: #e6cc59;
+  color: #000;
+  font-family: "Rockwell Condensed";
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0.8rem 2.2rem;
+  border: 0.1rem solid #000;
+  border-radius: 3.1rem;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.3rem;
+}
+.enlaces a:hover {
+  color: #fff;
+  background-color: #ffff00;
+}
+.lupa {
+  width: 1.87rem;
+}
+/*Seccion del main --------------------------------------------------------------------------------------------*/
+.contenido h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+.enciclopedias {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.enciclopedias img {
+  width: 31.25rem;
+}
+.enciclopedia {
+  border: 0.188rem solid #000;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 2.5rem;
+}
+.enciclopedia h2 {
+  position: absolute;
+  font-size: 2.8rem;
+  color: #ff0000;
+}
+.contenido p {
+  font-size: 2.5rem;
+  word-spacing: 0.313rem;
+  text-align: center;
+}
+/*Media queries para ajustes de la página (responsive design) -------------------------------------------------*/
+/*Ajuste de pantalla menor ha 641px (pc)*/
+@media all and (max-width: 641px) {
+  html {
+    width: 641px;
+  }
+}
+/* Pantallas desde (1367 - 768)px hasta (1920 - 1200) px (PC pequeña a PC media) */
+@media all and (min-width: 1367px) and (max-width: 1920px) {
+  .navegacion > img {
+    width: 15rem;
+  }
+  .enlaces a {
+    font-size: 1.5rem;
+    padding: 1rem 2.8rem;
+  }
+  .contenido h1 {
+    font-size: 6rem;
+  }
+  .enciclopedias img {
+    width: 40rem;
+  }
+  .enciclopedia h2 {
+    font-size: 3.5rem;
+  }
+  .contenido p {
+    font-size: 3rem;
+  }
+}
+/*Pantllas desde (1921 - 1200) px hasta (2350 - 1440)*/
+@media all and (min-width: 1921px) and (max-width: 2350px) {
+  html {
+    font-size: 1.3rem;
+  }
+  .enciclopedias {
+    justify-content: center;
+    gap: 12rem;
+  }
+}
+/*  Pantallas desde (2351 - 2880) px hasta (5121 - 2880) px (Pc media, Pc grnade y de lata gama de resolución) */
+@media all and (min-width: 2351px) and (max-width: 5121px) {
+  .navegacion > img {
+    width: 25rem;
+  }
+  .enlaces a {
+    font-size: 2.5rem;
+    padding: 1.5rem 4rem;
+  }
+  .contenido h1 {
+    font-size: 8rem;
+  }
+  .enciclopedias {
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+  }
+  .enciclopedias img {
+    width: 60rem;
+  }
+  .enciclopedia h2 {
+    font-size: 5.5rem;
+  }
+  .contenido p {
+    font-size: 4rem;
+    word-spacing: 0.5rem;
+  }
+}
+/* Pantallas de mas de (5121 - 2880) px*/
+@media all and (min-width: 5122px) {
+  html {
+    font-size: 2rem;
+  }
+  .enciclopedias {
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+  }
+}

@@ -1,0 +1,68 @@
+CREATE DATABASE proyecto_fundacion;
+
+USE proyecto_fundacion;
+
+CREATE TABLE usuarios (
+	usuario_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	cedula INT UNSIGNED UNIQUE NOT NULL,
+	nombre VARCHAR(30) NOT NULL,
+	telefono INT UNSIGNED UNIQUE NOT NULL,
+	email VARCHAR(50) UNIQUE NOT NULL,
+	direccion VARCHAR(50) DEFAULT "Sin dirección",
+	edad INT NOT NULL,
+	fecha_registro DATE NOT NULL
+);
+
+CREATE TABLE fundaciones (
+	fundacion_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	nit INT NOT NULL,
+	nombre VARCHAR(50) NOT NULL,
+	direccion VARCHAR(50) NOT NULL,
+	telefono INT UNIQUE NOT NULL,
+	email VARCHAR(50) UNIQUE NOT NULL,
+	persona_acargo VARCHAR(30) NOT NULL,
+	clase_animal VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE animales (
+	animal_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	tipo_animal VARCHAR(5) NOT NULL,
+	raza VARCHAR(30) DEFAULT "Raza no especificada",
+	envergadura VARCHAR(15) NOT NULL,
+	nombre VARCHAR(30) DEFAULT "No registra nombre",
+	edad TINYINT NOT NULL,
+	fecha_ingreso DATE NOT NULL,
+	salud VARCHAR(10) NOT NULL,
+	disponibilidad CHAR(2),
+	fundacion_id INT UNSIGNED,
+	FOREIGN KEY (fundacion_id) REFERENCES fundaciones(fundacion_id)
+);
+
+CREATE TABLE adopciones (
+	adopcion_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	usuario_id INT UNSIGNED,
+	fecha_adopcion DATE NOT NULL,
+	estado_adopcion CHAR(2) NOT NULL,
+	especie VARCHAR(5) NOT NULL,
+	fundacion_id INT UNSIGNED,
+	FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
+	FOREIGN KEY (fundacion_id) REFERENCES fundaciones(fundacion_id)
+);
+
+CREATE TABLE donaciones (
+	donacion_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	fecha_donacion DATE NOT NULL,
+	mensaje TEXT DEFAULT "Gracias por ayudar",
+	usuario_id INT UNSIGNED,
+	fundacion_id INT UNSIGNED,
+	FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id),
+	FOREIGN KEY (fundacion_id) REFERENCES fundaciones(fundacion_id)
+);
+
+CREATE TABLE historiales (
+	historial_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    	fecha_creacion DATE NOT NULL,
+    	descripcion TEXT NOT NULL,
+    	animal_id INT UNSIGNED,
+    	FOREIGN KEY (animal_id) REFERENCES animales(animal_id)
+); 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesión</title>
+    <!--Insercción hoja de estilos-->
+    <link rel="stylesheet" href="CSS/inicio_sesion.css">
+    <!--Icon al lado del título-->
+    <link rel="icon" href="assets/imagen_logo.png">
+    <!--Fuente de letra de googlefonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="container">
+        <div class="logo">
+            <img src="assets/imagen_logo.png" alt="Logo">
+        </div>
+        <div class="inicio">
+            <div class="formulario">
+                <h1>¡Bienvenido de nuevo!</h1>
+                <!--Para el proceso de datos se usa POST pero con un backend ya implementado pero si no requiere el procesar datos usa GET-->
+                <form action="cuenta.html" method="post">
+                    <input type="email" name="usuario" placeholder="Correo electrónico" required>
+                    <input type="password" name="contrasenia" placeholder="Contraseña" required>
+                    <button type="submit"><b>Iniciar sesión</b></button>
+                </form>
+                <a href="">Recordar contraseña</a>
+                <br>
+                <a href="registro.html">¿Todavía no tienes una cuenta? Regístrate</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
